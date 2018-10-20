@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<title>bday wish</title>
+
+		<style>
+		#outer{height:75%;width:70%;text-align:center;background-color:lightgrey;transition:transform 4s;z-index:1;
+		position:absolute;margin-top:60px;margin-left:180px;}
+		#title{font-size:20px;font-weight:bold;font-style:italic;font-family:cursive;text-align:center;}
+		.opencard {transform:rotateY(90deg);}
+		#inside{height:75%;width:70%;text-align:center;background-color:black;transition:transform 4s;z-index:0;
+		position:absolute;margin-top:60px;margin-left:180px;}
+		#inside_title{font-size:20px;font-weight:bold;font-style:italic;font-family:cursive;text-align:center;}
+		.close_card{transform:rotateY(90deg);}
+		#msg{font-size:20px;font-weight:bold;font-style:italic;font-family:cursive;text-align:center;color:red;}
+		#btn{background:silver;}
+		audio{display:}
+		</style>
+		<script>
+		function opencard(){
+		document.getElementById("outer").className='opencard';
+		}
+		function close_card(){
+		document.getElementById("outer").className='';
+		}
+		</script>
+		
+	</head>
+		<body>
+		
+		<div id="outer">
+		
+			<h2 id="title">HAPPY BIRTHDAY</h2>
+		<img src="pic/bday.jpg" height="300px" width="300px">
+		<p><button  onclick="opencard()" id="btn">
+		Click To Open</button>
+		<audio autoplay>
+			<source src="Mother Mom Special - Birthday Song.mp3" type="audio/mp3">
+		</audio>
+		</p>
+		<br>
+		</div><!--outside division close-->
+		<div id="inside">
+		<h2 id="inside_title">HAPPY BIRTHDAY</h2>
+		<img src="pic/happ.jpg" height="300px" width="300px">
+		<p id="msg">
+		<q>I feel so lucky to have you as my friend. Hope your birthday is as special as you are.
+		May all of your dreams come true. Thanks for being such a great friend. Happy birthday!</q></p>
+		<>
+		<p><button  onclick="close_card()" id="btn">Click To close</button></p>
+		</div><!--inside division close-->
+		</body>
+</html>
